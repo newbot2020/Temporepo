@@ -1,0 +1,49 @@
+﻿@model one2many.Models.Result
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Result</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.term)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.term)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.termresult)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.termresult)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.meritpostion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.meritpostion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Students)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Students.email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Classinfo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Classinfo.id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

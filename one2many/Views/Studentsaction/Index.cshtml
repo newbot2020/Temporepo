@@ -1,0 +1,73 @@
+﻿@model IEnumerable<one2many.Models.Studentaction>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Results.Students.name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Results.Students.email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Classinfos.Class)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Results.meritpostion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Results.term)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Results.termresult)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Results.meritpostion)
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Results.Students.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Results.Students.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Classinfos.Class)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Results.meritpostion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Results.term)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Results.termresult)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Results.meritpostion)
+                </td>
+
+
+            </tr>
+            }
+        </tbody>
+    </table>
